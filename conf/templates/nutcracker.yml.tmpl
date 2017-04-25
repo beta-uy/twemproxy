@@ -1,0 +1,9 @@
+redis:
+  listen: 0.0.0.0:$target_port
+  hash: fnv1a_64
+  distribution: ketama
+  redis: true
+  redis_db: $redis_db
+  redis_auth: $redis_auth
+  servers:
+   - $redis_host:$redis_port:1
